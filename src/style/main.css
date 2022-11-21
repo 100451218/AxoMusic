@@ -9,15 +9,40 @@
 header{
     height: 15%;
     width: 100%;
-    background-color: blue;
+    background-color: #E9791A;
+    display: flex;
+    flex-direction: row;
 }
+
+header img{
+    background-color: #E9791A;
+    height: 100%;
+    width: 15%;
+}
+
+header .menu{
+    display: flex;
+    width: 85%;
+    height: 100%;
+    align-items: center;
+}
+
+.menu button{
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    position: relative;
+    width: 20%;
+    height: 80%;
+}
+
 
 main {
     height: 75%;
+    display: inline-grid;
 }
 
 footer {
     height: 10%;
     width:100%;
-    background-color: aqua;
+    background-color: #E9791A;
 }
