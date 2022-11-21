@@ -1,0 +1,23 @@
+/* En este css, tienen que ir los estilos de objetos comunes para cualquier página (estilo de footer, estilo de header, botón de búsqueda...)*/
+
+* {
+    margin:0;
+    padding:0;
+    height: 100%;
+}
+
+header{
+    height: 15%;
+    width: 100%;
+    background-color: blue;
+}
+
+main {
+    height: 75%;
+}
+
+footer {
+    height: 10%;
+    width:100%;
+    background-color: aqua;
+}
