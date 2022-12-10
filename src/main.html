@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <title>AxoMusic</title>
     <link rel="stylesheet" href="style/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/main.js" defer></script>
 </head>
 <body>
     <header>
         <img src="images/AxoMusic.png" alt="Webpage logo">
         <div class="menu">
-            <button>Home</button>
-            <button>Playlist</button>
-            <button>Iniciar sesión</button>
-            <button>Registrarse</button>
+            <button id="button_home" onclick="window.location.replace('main.html')">Home</button>
+            <button id="button_playlist">Playlist</button>
+            <button id="button_register" onclick="window.location.replace('inicioRegistroSesion.html')">Iniciar sesión / Registrarse</button>
+            <button id="button_amigos">Amigos</button>
+            <button id="button_cuenta" onclick="window.location.replace('cuenta.html')">Cuenta</button>
         </div>
     </header>
     <main>Se llama League of Legends</main>

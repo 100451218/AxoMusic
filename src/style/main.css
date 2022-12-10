@@ -35,6 +35,14 @@ header .menu{
     height: 80%;
 }
 
+.menu div{
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    position: relative;
+    width: 20%;
+    height: 80%;
+}
+
 
 main {
     height: 75%;
