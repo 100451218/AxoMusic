@@ -18,6 +18,14 @@ window.addEventListener('load', (event) => {
 });
 
 document.getElementById("button_change_info").addEventListener("click", function(){go_to_change_info()})
+document.getElementById("confirm_button").addEventListener("click", function(){confirm_changes()})
+
+function  confirm_changes(){
+    get_new_values()
+    $("#datos").show();
+    $("#change_info_form").hide();
+    return;
+}
 
 function go_to_change_info(){
     $("#datos").hide();
@@ -66,9 +74,9 @@ function get_new_values() {
         localStorage.removeItem(curr_user+"_password");
         localStorage.removeItem(curr_user+"_name_surname");
         localStorage.removeItem(curr_user+"_email");
-        change_playlists(username);
+        /*change_playlists(username);
         change_favorite_songs(username);
-        change_most_listen_songs(username);
+        change_most_listen_songs(username);*/
     }
 
 
@@ -81,9 +89,6 @@ function get_new_values() {
 
     localStorage.currentUser = username;
 
-
-    //Recargar la página
-    window.location.replace("cuenta.html");
     return;
 }
 
