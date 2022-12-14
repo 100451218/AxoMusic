@@ -10,7 +10,7 @@ window.addEventListener('load', (event) => {
         $("#button_register").hide();
 
     }
-    document.getElementById("button_home").style.border = "5px solid red"
+    document.getElementById("button_home").style.border = "5px solid #e65100"
 
 });
 

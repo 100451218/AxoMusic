@@ -28,7 +28,10 @@
 }
 
 .info_cuenta p{
-    height: 20%;
     font-size: 20px;
     color: white;
+}
+
+#datos p{
+    height: 10%;
 }

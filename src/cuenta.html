@@ -19,20 +19,21 @@
     </div>
 </header>
 
-<div class = "info_cuenta">
+<div class = "info_cuenta" id = "datos">
     <h2>Mi cuenta</h2>
     <p id = "label_usuario"></p>
     <p id = "label_nombre"></p>
     <p id = "label_email"></p>
-    <button onclick="go_to_change_info()">Cambiar información</button><br>
+    <button id = "button_change_info">Cambiar información</button><br>
 </div>
-<form id="change_info_form">
-    <p>Username:</p>
+<form class = "info_cuenta"  id="change_info_form">
+    <p>Usuario:</p>
     <input id = "change_username" type="text" placeholder="Usuario"><br>
     <p>Nombre y apellidos:</p>
     <input id = "change_nombre" type="text" placeholder="Nombre y apellidos"><br>
     <p>Email:</p>
     <input id = "change_email" type="email" placeholder="Email"><br>
+    <button id = "confirm_button">Confirmar cambios</button><br>
 </form>
 
 
