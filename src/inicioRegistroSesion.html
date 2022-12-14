@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Axomusic/Inicio y Registro</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/inicioRegistroSesion.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/inicioRegistroSesion.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/AxoMusic.png" alt="Webpage logo">
+        <div class="menu">
+            <button onclick="window.location.replace('main.html')">Home</button>
+            <button>Playlist</button>
+            <button>Iniciar sesión</button>
+            <button>Registrarse</button>
+        </div>
+    </header>
+
+    <form class = "form_iniciar_registrarse" id="iniciar_sesion">
+        <h2>Iniciar Sesión</h2>
+        <div class = "label_log">
+            <p>Introduzca su nombre de usuario</p>
+            <input class = "input_log" id = "log_username" type="text" placeholder="Usuario" name="user_name"><br>
+        </div>
+        <div class = "label_log">
+            <p>Introduzca su contraseña</p>
+            <input class = "input_log" id = "log_password" type="password" placeholder="Contraseña" name="pass"><br>
+        </div>
+
+        <div class = "log_button">
+            <button id="submit_log">Entrar</button>
+        </div>
+
+
+    </form>
+
+    <form class = "form_iniciar_registrarse" id="registrarse">
+        <h2>Registrarse</h2>
+        <div class = "label_log">
+            <p>Introduzca su nombre de usuario</p>
+            <input class = "input_log" id = "sign_username" type="text" placeholder="Usuario" name="user_name"><br>
+        </div>
+        <div class = "label_log">
+            <p>Introduzca su contraseña</p>
+            <input class = "input_log" id = "sign_password" type="password" placeholder="Contraseña" name="pass"><br>
+        </div>
+        <div class = "label_log">
+            <p>Introduzca su email</p>
+            <input class = "input_log" id = "sign_email" type="email" placeholder="Correo electrónico" name="pass"><br>
+        </div>
+
+        <div class = "log_button">
+            <button id="submit_sign">Entrar</button>
+        </div>
+
+
+    </form>
+
+</body>
+</html>
