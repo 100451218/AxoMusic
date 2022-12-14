@@ -4,7 +4,7 @@ window.addEventListener('load', (event) => {
     //Al cargar la página, ocultamos los elementos que permiten cambiar la información de la cuenta
     $("#change_info_form").hide()
 
-    document.getElementById("button_cuenta").style.border = "5px solid #e65100"
+    document.getElementById("button_cuenta").style.border = "5px solid #f57c00"
 
     //Esto es para que al seleccionar la opción de cambiar información, los elementos se inicialicen con los valores anteriores
     document.getElementById("label_usuario").innerHTML = "Usuario: " + curr_user;
@@ -17,9 +17,11 @@ window.addEventListener('load', (event) => {
     document.getElementById("change_email").value = localStorage.getItem(curr_user+"_email");
 });
 
+//Añadir los event listener a los botones
 document.getElementById("button_change_info").addEventListener("click", function(){go_to_change_info()})
 document.getElementById("confirm_button").addEventListener("click", function(){confirm_changes()})
 document.getElementById("close_session").addEventListener("click", function (){close_session()})
+document.getElementById("delete_account").addEventListener("click", function (e){delete_account(e)})
 
 function  confirm_changes(){
     get_new_values()
@@ -40,6 +42,30 @@ function close_session(){
         window.location.replace("main.html");
     }
     return;
+}
+
+function delete_account(e){
+    if(confirm("¿Quieres borrar tu cuenta y eliminar todos los datos?")){
+        e.preventDefault()
+        user_mail = localStorage.getItem(curr_user+"_email")
+        localStorage.removeItem(user_mail)
+        localStorage.removeItem(curr_user+"_password");
+        localStorage.removeItem(curr_user+"_name_surname");
+        localStorage.removeItem(curr_user+"_email");
+
+        const get_names = localStorage.getItem("usernames");
+        let all_names = get_names.split(",");
+        let new_string = "";
+        for (let i = 0; i < all_names.length; i++) {
+            if (all_names[i] != curr_user) {
+                new_string += all_names[i]
+            }
+        }
+        localStorage.setItem("usernames", new_string)
+        localStorage.setItem("currentUser", "")
+        window.location.replace("main.html")
+    }
+    return
 }
 
 function get_new_values() {
