@@ -1,4 +1,4 @@
-{
+var MUSIC_DATA={
   "001.mp3": ["The Quarantine Zone", "Gustavo Santaolalla", "The Last Of Us", ["Banda Sonora"], "TheLastOfUs.jpg" ],
   "002.mp3": ["Smugglers", "Gustavo Santaolalla", "The Last Of Us", ["Banda Sonora"], "TheLastOfUs.jpg" ],
   "003.mp3": ["Never Again", "Gustavo Santaolalla", "The Last Of Us", ["Banda Sonora"], "TheLastOfUs.jpg" ],

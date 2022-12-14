@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>AxoMusic</title>
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="scripts/main.js" defer></script>
+    <script src="scripts/Buscador.js"></script>
+    <script src="scripts/music.js"></script>
+</head>
+<body onload="load_all_local_songs()">
+<header>
+    <img src="images/AxoMusic.png" alt="Webpage logo">
+    <div class="menu">
+        <a href="main.html"><button id="button_home">Home</button></a>
+        <a href="main.html"><button id="button_playlist">Playlist</button></a>
+        <button id="button_register" onclick="window.location.replace('inicioRegistroSesion.html')">Iniciar sesión / Registrarse</button>
+        <a href="main.html"><button id="button_amigos">Amigos</button></a>
+        <a href="cuenta.html"><button id="button_cuenta">Cuenta</button></a>
+
+
+
+
+    </div>
+</header>
+<main>
+    <div class="search_bar">
+        <input onkeyup="mostrar_sugerencias()" placeholder="Buscar" type="text" id="user_input">
+    </div>
+    <div class="Music_suggestions_container" id="Music_suggestions_container">
+
+    </div>
+
+</main>
+<footer>
+    <p>Aprenderás muy rápido cómo funciona</p>
+</footer>
+</body>
+</html>
