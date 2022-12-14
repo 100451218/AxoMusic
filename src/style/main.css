@@ -13,13 +13,12 @@ body{
 header{
     height: 15%;
     width: 100%;
-    background-color: #E9791A;
+    background-color: #006db3;
     display: flex;
     flex-direction: row;
 }
 
 header img{
-    background-color: #E9791A;
     height: 100%;
     width: 15%;
 }
@@ -62,5 +61,5 @@ main {
 footer {
     height: 10%;
     width:100%;
-    background-color: #E9791A;
+    background-color: #006db3;
 }
