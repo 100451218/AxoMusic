@@ -1,6 +1,6 @@
 /* En este css, tienen que ir los estilos de objetos comunes para cualquier página (estilo de footer, estilo de header, botón de búsqueda...)*/
 
-* {
+html, body {
     margin:0;
     padding:0;
     height: 100%;
@@ -34,6 +34,7 @@ header .menu{
 .menu button{
     width: 100%;
     height: 100%;
+    border-radius: 20px;
 }
 
 .menu a{
