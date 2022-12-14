@@ -1,0 +1,18 @@
+#perfil_content {
+    display: flex;
+}
+
+#perfil_col_right {
+    float: left;
+    width : 49vw;
+    height: 75vh;
+
+    flex:50%;
+}
+#perfil_col_left {
+    background-color: #4FAFFF;
+    float: left;
+    width : 49vw;
+    height: 75vh;
+    flex:50%;
+}
