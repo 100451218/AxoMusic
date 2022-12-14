@@ -19,6 +19,7 @@ window.addEventListener('load', (event) => {
 
 document.getElementById("button_change_info").addEventListener("click", function(){go_to_change_info()})
 document.getElementById("confirm_button").addEventListener("click", function(){confirm_changes()})
+document.getElementById("close_session").addEventListener("click", function (){close_session()})
 
 function  confirm_changes(){
     get_new_values()
@@ -30,6 +31,14 @@ function  confirm_changes(){
 function go_to_change_info(){
     $("#datos").hide();
     $("#change_info_form").show();
+    return;
+}
+
+function close_session(){
+    if(confirm("¿Quieres cerrar sesión?")){
+        localStorage.currentUser = "";
+        window.location.replace("main.html");
+    }
     return;
 }
 
