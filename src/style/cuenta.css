@@ -37,8 +37,12 @@
 }
 
 #close_session{
-
     text-align: center;
     color: white;
     background-color: #ce4330;
+}
+
+#delete_account{
+    background-color: #c00000;
+    color: white;
 }
