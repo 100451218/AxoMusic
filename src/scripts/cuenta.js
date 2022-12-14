@@ -4,7 +4,7 @@ window.addEventListener('load', (event) => {
     //Al cargar la página, ocultamos los elementos que permiten cambiar la información de la cuenta
     $("#change_info_form").hide()
 
-    document.getElementById("button_cuenta").style.border = "5px solid #e65100"
+    document.getElementById("button_cuenta").style.border = "5px solid #f57c00"
 
     //Esto es para que al seleccionar la opción de cambiar información, los elementos se inicialicen con los valores anteriores
     document.getElementById("label_usuario").innerHTML = "Usuario: " + curr_user;
