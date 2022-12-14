@@ -4,37 +4,38 @@
     <meta charset="UTF-8">
     <title>Axomusic/Cuenta</title>
     <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/cuenta.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="scripts/cuenta.js" defer></script>
 </head>
 <body>
-    <header>
-        <img src="images/AxoMusic.png" alt="Webpage logo">
-        <div class="menu">
-            <button id="button_home" onclick="window.location.replace('main.html')">Home</button>
-            <button id="button_playlist">Playlist</button>
-            <button id="button_amigos">Amigos</button>
-            <button id="button_cuenta" onclick="window.location.replace('cuenta.html')">Cuenta</button>
-        </div>
-    </header>
+<header>
+    <img src="images/AxoMusic.png" alt="Webpage logo">
+    <div class="menu">
+        <button id="button_home" onclick="window.location.replace('main.html')">Home</button>
+        <button id="button_playlist">Playlist</button>
+        <button id="button_amigos">Amigos</button>
+        <button id="button_cuenta" onclick="window.location.replace('cuenta.html')">Cuenta</button>
+    </div>
+</header>
 
-    <section class="row-text">
-        <h2>Información de la cuenta</h2>
-        <div id = "regular_content_user">
-            <p id = "label_usuario"></p>
-            <p id = "label_nombre"></p>
-            <p id = "label_email"></p>
-        </div>
-        <form id="change_info_form">
-            <p>Username:</p>
-            <input id = "change_username" type="text" placeholder="Usuario"><br>
-            <p>Nombre y apellidos:</p>
-            <input id = "change_nombre" type="text" placeholder="Nombre y apellidos"><br>
-            <p>Email:</p>
-            <input id = "change_email" type="email" placeholder="Email"><br>
-        </form>
-        <button onclick="go_to_change_info()">Cambiar información</button><br>
-    </section>
+<div class = "info_cuenta">
+    <h2>Mi cuenta</h2>
+    <p id = "label_usuario"></p>
+    <p id = "label_nombre"></p>
+    <p id = "label_email"></p>
+    <button onclick="go_to_change_info()">Cambiar información</button><br>
+</div>
+<form id="change_info_form">
+    <p>Username:</p>
+    <input id = "change_username" type="text" placeholder="Usuario"><br>
+    <p>Nombre y apellidos:</p>
+    <input id = "change_nombre" type="text" placeholder="Nombre y apellidos"><br>
+    <p>Email:</p>
+    <input id = "change_email" type="email" placeholder="Email"><br>
+</form>
+
+
 
 
 </body>

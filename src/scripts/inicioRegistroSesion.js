@@ -24,6 +24,8 @@ document.getElementById("iniciar_sesion").addEventListener("submit", (e)=> {
         //Si el usuario no está registrado
         alert("Usuario no registrado");
     }
+
+
 })
 
 function check_username_log(username){
@@ -61,6 +63,7 @@ document.getElementById("registrarse").addEventListener("submit", (e)=> {
     e.preventDefault()
     const usuario = document.getElementById("sign_username").value;
     const contraseña = document.getElementById("sign_password").value;
+    const name_surname = document.getElementById("sign_name_surname").value;
     const correo = document.getElementById("sign_email").value;
 
     //Comprobamos que los inputs sean correctos
@@ -74,9 +77,16 @@ document.getElementById("registrarse").addEventListener("submit", (e)=> {
         return;
     }
 
+    if (name_surname == ""){
+        alert("Nombre y apellidos es obligatorio");
+        return;
+    }
+
     add_username(usuario);
     let password_name = usuario + "_password";
     localStorage.setItem(password_name, contraseña);
+    let credentials_name = usuario + "_name_surname";
+    localStorage.setItem(credentials_name, name_surname);
     localStorage.setItem(correo, usuario);
     let email_name = usuario + "_email";
     localStorage.setItem(email_name, correo);
