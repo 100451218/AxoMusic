@@ -58,6 +58,7 @@ function crear_amigos_predefinidos(){
 window.addEventListener('DOMContentLoaded', (event) => {
     crear_amigos_predefinidos()
     draw_profile()
+    document.getElementById("button_amigos").style.border = "5px solid #f57c00"
 
 
 })
