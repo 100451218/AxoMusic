@@ -57,14 +57,9 @@
 
 }
 
-#perfil_escuchando_ahora{
-    position: relative;
-    width: 20%;
-    left: 70%;
 
-}
 
-#perfil_cancion_favorita{
+.perfil_col_left_song{
     position: relative;
     width: 20%;
     left: 70%;
