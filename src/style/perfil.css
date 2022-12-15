@@ -9,10 +9,46 @@
 
     flex:50%;
 }
+
+
+
 #perfil_col_left {
     background-color: #4FAFFF;
     float: left;
     width : 49vw;
     height: 75vh;
     flex:50%;
+}
+
+#perfil_nombre{
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 58px;
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+}
+
+#perfil_tu_imagen{
+    position: relative;
+    width: 15%;
+    left: 70%;
+
+}
+
+#perfil_escuchando_ahora{
+    position: relative;
+    width: 20%;
+    left: 70%;
+
+}
+
+#perfil_cancion_favorita{
+    position: relative;
+    width: 20%;
+    left: 70%;
 }

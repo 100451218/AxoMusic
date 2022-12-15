@@ -1,3 +1,7 @@
+
+document.getElementById("button_register").style.border = "5px solid #f57c00"
+
+
 //Código para iniciar sesión
 document.getElementById("iniciar_sesion").addEventListener("submit", (e)=> {
     e.preventDefault()
@@ -27,6 +31,7 @@ document.getElementById("iniciar_sesion").addEventListener("submit", (e)=> {
 
 
 })
+
 
 function check_username_log(username){
     //Comprobar que existe un usuario
