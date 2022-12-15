@@ -19,14 +19,15 @@ function draw_profile(){
 
     pagina_perfil_left_html.innerHTML = pagina_perfil_left_html.innerHTML+`<h2 id="perfil_nombre">#${nombre_usuario}</h2>`
     //Creamos cancion favorita
-    if (cancion_favorita_mp3 != NaN | cancion_favorita_mp3 != "") {
+    console.log(cancion_favorita_mp3)
+    if (cancion_favorita_mp3 !== null ) {
         cancion_favorita_image = cancion_favorita[4]
-        pagina_perfil_left_html.innerHTML = pagina_perfil_left_html.innerHTML + `<p>Cancion favorita:</p><div id=${cancion_favorita_mp3}><img class="perfil_col_left_song" src="images/${cancion_favorita_image}"></div>`
+        pagina_perfil_left_html.innerHTML = pagina_perfil_left_html.innerHTML + `<p style="margin-left: 15px;">Cancion favorita:</p><div id=${cancion_favorita_mp3}><img class="perfil_col_left_song" src="images/${cancion_favorita_image}"></div>`
     }
     //Creamos escuchando ahora
-    if (escuchando_ahora_mp3 != NaN | escuchando_ahora_mp3 != "") {
+    if (escuchando_ahora_mp3 !== null) {
         escuchando_ahora_image = escuchando_ahora[4]
-        pagina_perfil_left_html.innerHTML = pagina_perfil_left_html.innerHTML + `<p>Escuchando ahora:</p><div id=${escuchando_ahora_mp3}><img class="perfil_col_left_song" src="images/${escuchando_ahora_image}"></div>`
+        pagina_perfil_left_html.innerHTML = pagina_perfil_left_html.innerHTML + `<p style="margin-left: 15px;">Escuchando ahora:</p><div id=${escuchando_ahora_mp3}><img class="perfil_col_left_song" src="images/${escuchando_ahora_image}"></div>`
     }
 
 
@@ -46,6 +47,7 @@ function draw_profile(){
 
 function crear_amigos_predefinidos(){
     nombre_usuario = localStorage.getItem("currentUser")
+    console.log(nombre_usuario)
     localStorage.setItem(nombre_usuario+"_amigos",'["MdeMarcos","Robert","PdePepe","LanKe"]')
     localStorage.setItem("MdeMarcos_escuchando", "039.mp3")
     localStorage.setItem("Robert_escuchando", "015.mp3")
