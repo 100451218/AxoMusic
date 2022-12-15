@@ -1,3 +1,6 @@
+body{
+    overflow-x: hidden;
+}
 :root {
     --color-header: #0069c0;
     --color-button: #6ec6ff;
