@@ -78,16 +78,29 @@ header .menu{
     align-items: center;
 }
 
+.music_control {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    left: 30%;
+    width: 40%;
+}
 
-main {
-    height: 75%;
-    display: flex;
+#main_page{
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #music_image{
     height: 40%;
     width: 100%;
 }
+
+main {
+    height: 75%;
+    display: flex;
+}
+
 
 footer {
     height: 10%;
