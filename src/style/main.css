@@ -86,6 +86,20 @@ header .menu{
     width: 40%;
 }
 
+.go_to_buscador{
+    position: absolute;
+    background-image: url("../images/busqueda.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 3%;
+    bottom: 10%;
+    width:5%;
+    height: 7%;
+    background-color: #ffa06d;
+    border-radius: 100%;
+    border: none;
+}
+
 #main_page{
     justify-content: space-evenly;
     align-items: center;

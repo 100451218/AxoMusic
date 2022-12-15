@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>AxoMusic</title>
-    <link rel="stylesheet"href="style/Buscador.css">
+    <link rel="stylesheet" href="style/Buscador.css">
     <link rel="stylesheet" href="style/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="scripts/main.js" defer></script>
-    <script src="scripts/Buscador.js"></script>
+    <script src="scripts/Buscador.js" defer></script>
     <script src="scripts/music.js"></script>
     <script src="scripts/claro_oscuro.js" defer></script>
 </head>
@@ -21,14 +21,14 @@
         </label>
         <a href="main.html"><button id="button_home">Home</button></a>
         <a href="main.html"><button id="button_playlist">Playlist</button></a>
-        <button id="button_register" onclick="window.location.replace('inicioRegistroSesion.html')">Iniciar sesión / Registrarse</button>
-        <a href="perfil.html"><button id="button_amigos">Amigos</button></a>
-        <a href="cuenta.html"><button id="button_cuenta">Cuenta</button></a>
+        <a href="perfil.html" id="a_amigos"><button id="button_amigos">Amigos</button></a>
+        <a href="cuenta.html" id="a_cuenta"><button id="button_cuenta">Cuenta</button></a>
+        <a href="inicioRegistroSesion.html" id="a_register"><button id="button_register">Iniciar sesión</button></a>
     </div>
 </header>
 <main>
-    <div class="search_bar">
-        <input onkeyup="mostrar_sugerencias()" placeholder="Buscar" type="text" id="user_input">
+    <div class="search_bar_container">
+        <input onkeyup="mostrar_sugerencias()" placeholder="---Escribe canción, artista, album o género---" type="text" id="user_input" class="search_bar">
     </div>
     <div class="Music_suggestions_container" id="Music_suggestions_container">
 

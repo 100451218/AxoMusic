@@ -68,6 +68,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     document.getElementById("button_amigos").style.border = "5px solid #f57c00"
     crear_amigos_predefinidos()
     draw_profile()
+    document.getElementById("button_amigos").style.border = "5px solid #f57c00"
 
 
 })

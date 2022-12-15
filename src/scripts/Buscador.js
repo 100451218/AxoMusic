@@ -1,4 +1,9 @@
 
+//Borrar marco del botón home
+window.addEventListener('load', () => {
+    document.getElementById("button_home").style.border = "";
+})
+
 function load_all_local_songs(){
     //Cuando se habra la página del buscador vamos a cargar todas las canciones que puede buscar (pero no las enseñamos)
     var ul=document.createElement("ul");
@@ -12,7 +17,7 @@ function load_all_local_songs(){
         li.setAttribute('id', key)
         var img = document.createElement('img');
         img.setAttribute('src', "images/"+MUSIC_DATA[key][4]);
-        var song_title = document.createElement('h2');
+        var song_title = document.createElement('h3');
         song_title.innerHTML=MUSIC_DATA[key][0];
         var song_autor = document.createElement('h4');
         song_autor.innerHTML=MUSIC_DATA[key][1];

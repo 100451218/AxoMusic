@@ -11,7 +11,6 @@ window.addEventListener('load', (event) => {
     }
     document.getElementById("button_home").style.border = "5px solid #f57c00"
     add_song()
-
 });
 
 document.getElementById("button_playlist").addEventListener("click", function(e){not_log_in(e)});
