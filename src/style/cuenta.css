@@ -1,4 +1,17 @@
+:root {
+    --color-header: #0069c0;
+    --color-button: #6ec6ff;
+    --color-fondo:#2196f3;
+    --naranja-form: #E9791A;
 
+}
+
+[tema="dark"]{
+    --color-header: #131c46;    
+    --color-button: #657b8c;
+    --color-fondo: #3c4c8f;
+    --naranja-form: #894c17;
+}
 
 .info_cuenta{
     height: 70%;
