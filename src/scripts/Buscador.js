@@ -1,6 +1,4 @@
 
-
-
 function load_all_local_songs(){
     //Cuando se habra la página del buscador vamos a cargar todas las canciones que puede buscar (pero no las enseñamos)
     var ul=document.createElement("ul");

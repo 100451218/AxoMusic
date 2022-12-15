@@ -14,7 +14,7 @@
 
 .info_cuenta h2{
     height: 10%;
-    margin-bottom: 6%;
+    margin-bottom: 5%;
     font-size: 35px;
     color: black;
 }
@@ -30,6 +30,7 @@
 
 .info_cuenta p{
     font-size: 25px;
+    margin:4%;
 }
 
 #datos p{

@@ -61,10 +61,21 @@ header .menu{
     height: 80%;
 }
 
+.automatic_play{
+    display: flex;
+    background-color: #0b77a8;
+    height: 55vh;
+    flex-direction: column;
+    width: 30%;
+    align-items: center;
+}
+
 
 main {
     height: 75%;
-    display: inline-grid;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 footer {
