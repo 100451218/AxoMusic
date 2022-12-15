@@ -76,9 +76,10 @@ header .menu{
     flex-direction: column;
     width: 30%;
     align-items: center;
+    margin-left: 8%;
 }
 
-.music_control {
+#music_control {
     display: none;
     position: fixed;
     bottom: 10px;
@@ -105,7 +106,7 @@ header .menu{
     align-items: center;
 }
 
-#music_image{
+.music_image{
     height: 40%;
     width: 100%;
 }
