@@ -79,7 +79,14 @@ function add_song_not_listened(){
 function play_song(e){
     info_audio = e.target.parentElement.id;
     source_url = info_audio.split("_")[1];
-    document.getElementById("music_control").setAttribute("src", "music/"+source_url)
+    source_url = "music/"+source_url
+    object_to_change = document.getElementById("music_control").getAttribute("src");
+    if (object_to_change == source_url){
+        document.getElementById("music_control").setAttribute("src", "")
+        $("#music_control").hide()
+        return
+    }
+    document.getElementById("music_control").setAttribute("src", source_url)
     $("#music_control").show()
 }
 
