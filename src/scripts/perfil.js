@@ -1,19 +1,22 @@
 function draw_profile(){
+    /*
+    Necesita por local storage
+        currentUser+"_escuchando"
+        currentUser+"_cancion_favorita"
+     */
+
     nombre_usuario = localStorage.getItem("currentUser")
-    localStorage.setItem(nombre_usuario+"_escuchando","001.mp3")
-    localStorage.setItem(nombre_usuario+"_cancion_favorita","033.mp3")
+
     escuchando_ahora_mp3 = localStorage.getItem(nombre_usuario+"_escuchando")
     cancion_favorita_mp3 = localStorage.getItem(nombre_usuario+"_cancion_favorita")
     escuchando_ahora = MUSIC_DATA[escuchando_ahora_mp3]
     cancion_favorita = MUSIC_DATA[cancion_favorita_mp3]
     lista_amigos = JSON.parse(localStorage.getItem(nombre_usuario+"_amigos"))
 
-    pagina_perfil_right_html = document.getElementById("perfil_col_right")
-    pagina_perfil_left_html = document.getElementById("perfil_col_left")
-
-
 
     //columna izquierda
+    pagina_perfil_left_html = document.getElementById("perfil_col_left")
+
     pagina_perfil_left_html.innerHTML = pagina_perfil_left_html.innerHTML+`<h2 id="perfil_nombre">#${nombre_usuario}</h2>`
     //Creamos cancion favorita
     if (cancion_favorita_mp3 != NaN | cancion_favorita_mp3 != "") {
@@ -28,9 +31,13 @@ function draw_profile(){
 
 
     //columna derecha
+    pagina_perfil_right_html = document.getElementById("perfil_col_right")
+
     counter = 0
     while (lista_amigos.length> counter){
-        lista_amigos[counter]
+        escuchando_ahora_mp3 = localStorage.getItem(lista_amigos[counter]+"_escuchando")
+        escuchando_ahora_image = escuchando_ahora = MUSIC_DATA[escuchando_ahora_mp3][4]
+        pagina_perfil_right_html.innerHTML =  pagina_perfil_right_html.innerHTML + `<div class="perfil_amigo" ><p>#${lista_amigos[counter]}</br>Escuchando ahora:</p><div id=${escuchando_ahora_mp3}><img class="perfil_col_left_song" src="images/${escuchando_ahora_image}"></div></div>`
         counter++
     }
 
@@ -39,9 +46,11 @@ function draw_profile(){
 
 function crear_amigos_predefinidos(){
     nombre_usuario = localStorage.getItem("currentUser")
-    localStorage.setItem(nombre_usuario+"_amigos",'["MdeMarcos","Robert"]')
+    localStorage.setItem(nombre_usuario+"_amigos",'["MdeMarcos","Robert","PdePepe","LanKe"]')
     localStorage.setItem("MdeMarcos_escuchando", "039.mp3")
     localStorage.setItem("Robert_escuchando", "015.mp3")
+    localStorage.setItem("PdePepe_escuchando", "001.mp3")
+    localStorage.setItem("LanKe_escuchando", "018.mp3")
 }
 
 window.addEventListener('DOMContentLoaded', (event) => {
