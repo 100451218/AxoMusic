@@ -12,7 +12,7 @@ function load_all_local_songs(){
         li.setAttribute('id', key)
         var img = document.createElement('img');
         img.setAttribute('src', "images/"+MUSIC_DATA[key][4]);
-        var song_title = document.createElement('h2');
+        var song_title = document.createElement('h3');
         song_title.innerHTML=MUSIC_DATA[key][0];
         var song_autor = document.createElement('h4');
         song_autor.innerHTML=MUSIC_DATA[key][1];
