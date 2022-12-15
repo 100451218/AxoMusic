@@ -1,5 +1,13 @@
 /* En este css, tienen que ir los estilos de objetos comunes para cualquier página (estilo de footer, estilo de header, botón de búsqueda...)*/
 
+:root {
+    --color-header: #0069c0;
+}
+
+[tema="dark"]{
+    --color-header: #190539;    
+}
+
 html, body {
     margin:0;
     padding:0;
@@ -13,7 +21,7 @@ body{
 header{
     height: 15%;
     width: 100%;
-    background-color: #0069c0;
+    background-color:var(--color-header);
     display: flex;
     flex-direction: row;
 }
@@ -64,3 +72,4 @@ footer {
     width:100%;
     background-color: #0069c0;
 }
+

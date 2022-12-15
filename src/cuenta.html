@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style/cuenta.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="scripts/cuenta.js" defer></script>
+    <script src="scripts/claro_oscuro.js" defer></script>
 </head>
 <body>
 <header>
@@ -16,6 +17,7 @@
         <a href="main.html"><button id="button_playlist">Playlist</button></a>
         <a href="main.html"><button id="button_amigos">Amigos</button></a>
         <a href="cuenta.html"><button id="button_cuenta">Cuenta</button></a>
+        
     </div>
 </header>
 
@@ -26,6 +28,10 @@
     <p id = "label_email"></p>
     <button id = "button_change_info">Cambiar información</button><br>
     <button id = "close_session">Cerrar sesión</button>
+    <label id="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+    </label>>
 </div>
 <form class = "info_cuenta"  id="change_info_form">
     <p>Usuario:</p>
@@ -44,5 +50,4 @@
 
 
 </body>
-
 </html>
