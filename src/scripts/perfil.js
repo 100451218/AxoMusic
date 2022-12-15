@@ -20,12 +20,12 @@ function draw_profile(){
     pagina_perfil_left_html.innerHTML = pagina_perfil_left_html.innerHTML+`<h2 id="perfil_nombre">#${nombre_usuario}</h2>`
     //Creamos cancion favorita
     console.log(cancion_favorita_mp3)
-    if (cancion_favorita_mp3 !== null ) {
+    if (cancion_favorita_mp3 !== null && cancion_favorita_mp3 !== "") {
         cancion_favorita_image = cancion_favorita[4]
         pagina_perfil_left_html.innerHTML = pagina_perfil_left_html.innerHTML + `<p style="margin-left: 15px;">Cancion favorita:</p><div id=${cancion_favorita_mp3}><img class="perfil_col_left_song" src="images/${cancion_favorita_image}"></div>`
     }
     //Creamos escuchando ahora
-    if (escuchando_ahora_mp3 !== null) {
+    if (escuchando_ahora_mp3 !== null && escuchando_ahora_mp3 !== "") {
         escuchando_ahora_image = escuchando_ahora[4]
         pagina_perfil_left_html.innerHTML = pagina_perfil_left_html.innerHTML + `<p style="margin-left: 15px;">Escuchando ahora:</p><div id=${escuchando_ahora_mp3}><img class="perfil_col_left_song" src="images/${escuchando_ahora_image}"></div>`
     }
