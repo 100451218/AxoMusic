@@ -8,15 +8,22 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="scripts/inicioRegistroSesion.js" defer></script>
+    <script src="scripts/claro_oscuro.js" defer></script>
+
 </head>
 <body>
 <header>
     <img src="images/AxoMusic.png" alt="Webpage logo">
     <div class="menu">
+        <label id="switch" class="claro_oscuro">
+            <input type="checkbox"> oscuro
+            <span class="slider round"></span>
+        </label>
         <a href="main.html"><button id="button_home">Home</button></a>
         <a href="main.html"><button id="button_playlist">Playlist</button></a>
         <a href="main.html" id="a_amigos"><button id="button_amigos">Amigos</button></a>
         <a href="inicioRegistroSesion.html" id="a_register"><button id="button_register">Iniciar sesión</button></a>
+        
     </div>
 </header>
 
@@ -35,8 +42,10 @@
         <button id="submit_log">Entrar</button>
     </div>
 
-
+    
 </form>
+
+
 
 <form class = "form_iniciar_registrarse" id="registrarse">
     <h2>Registrarse</h2>

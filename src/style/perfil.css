@@ -1,3 +1,20 @@
+:root {
+    --color-header: #0069c0;
+    --color-button: #6ec6ff;
+    --color-fondo:#2196f3;
+    --naranja-form: #E9791A;
+    --fondo-colum-izquierda: #4FAFFF;
+
+}
+
+[tema="dark"]{
+    --color-header: #131c46;    
+    --color-button: #657b8c;
+    --color-fondo: #3c4c8f;
+    --naranja-form: #894c17;
+    --fondo-colum-izquierda: #204462;
+}
+
 #perfil_content {
     display: flex;
 }
@@ -13,7 +30,7 @@
 
 
 #perfil_col_left {
-    background-color: #4FAFFF;
+    background-color: var(--fondo-colum-izquierda);
     float: left;
     width : 49vw;
     height: 75vh;
