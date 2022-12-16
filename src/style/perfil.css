@@ -3,6 +3,7 @@
     --color-button: #6ec6ff;
     --color-fondo:#2196f3;
     --naranja-form: #E9791A;
+    --color-text: black;
     --fondo-colum-izquierda: #4FAFFF;
 
 }
@@ -12,6 +13,7 @@
     --color-button: #657b8c;
     --color-fondo: #3c4c8f;
     --naranja-form: #894c17;
+    --color-text: white;
     --fondo-colum-izquierda: #204462;
 }
 
@@ -80,8 +82,18 @@
 
 #perfil_col_left h2{
     text-align: center;
+    color: var(--color-text);
+}
+
+#perfil_col_left p{
+    color: var(--color-text);
 }
 
 #perfil_col_right h3{
     text-align: center;
+    color: var(--color-text);
+}
+
+#perfil_col_right p{
+    color: var(--color-text);
 }

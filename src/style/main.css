@@ -6,6 +6,7 @@
     --color-fondo:#2196f3;
     --naranja-form: #E9791A;
     --slider-color: yellow;
+    --color-text: black;
     --slider-background: url("../images/dark.png");
 }
 
@@ -15,6 +16,7 @@
     --color-fondo: #3c4c8f;
     --naranja-form: #894c17;
     --slider-color: #ffa06d;
+    --color-text: white;
     --slider-background: url("../images/light.png");
 }
 
@@ -56,6 +58,7 @@ header .menu{
     height: 100%;
     border-radius: 20px;
     background-color: var(--color-button);
+    color: var(--color-text);
 }
 
 
@@ -77,12 +80,20 @@ header .menu{
 
 .automatic_play{
     display: flex;
-    background-color: #0b77a8;
+    background-color: var(--color-button);
     height: 55vh;
     flex-direction: column;
     width: 30%;
     align-items: center;
     margin-left: 8%;
+}
+
+.automatic_play h2{
+    color: var(--color-text);
+}
+
+.automatic_play div{
+    color: var(--color-text);
 }
 
 #music_control {
