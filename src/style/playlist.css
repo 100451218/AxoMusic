@@ -39,3 +39,13 @@ a {
     left: 0;
     position: absolute;
 }
+
+.playlist_name{
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+}

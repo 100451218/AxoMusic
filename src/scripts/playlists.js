@@ -28,19 +28,23 @@ function cargar_playlists_de_usuario(){
 
     if (playlists_user !== null && playlists_user !== undefined) {
         var pagina_crear_playlist = document.getElementById("playlists_list");
-        pagina_crear_playlist.innerHTML = `<div id="playlists_list"></div>`
+        pagina_crear_playlist.innerHTML = ``
         counter = 0
         while (playlists_user.length > counter) {
+
             var playlist_name_html = `
-            <h2 id="playlist_name" >${playlists_user[counter]}</h2>
+            <div class="playlist_object">
+            <h2 class="playlist_name" >${playlists_user[counter]}</h2>
             `
-            pagina_crear_playlist.innerHTML = pagina_crear_playlist.innerHTML + playlist_name_html
+
 
             canciones_lista = JSON.parse(localStorage.getItem(user+"_playlist_"+playlists_user[counter]))
 
             counter2 = 0
             while ((canciones_lista).length > counter2) {
 
+                cancion_html = `<div id=${canciones_lista[counter2]}><img class="lista_cancion" src="images/${MUSIC_DATA[canciones_lista[counter2]][4]}"><a>${MUSIC_DATA[canciones_lista[counter2]][0]}</a></div>`
+                playlist_name_html = playlist_name_html + cancion_html
                 cancion_html = `<div class="playlist_song" id=${canciones_lista[counter2]}>
                     <img class="lista_cancion" src="images/${MUSIC_DATA[canciones_lista[counter2]][4]}">
                     <a>${MUSIC_DATA[canciones_lista[counter2]][0]}</a>
@@ -49,8 +53,12 @@ function cargar_playlists_de_usuario(){
                 counter2++
 
             }
+            playlist_name_html = playlist_name_html+`</div>`
+            pagina_crear_playlist.innerHTML = pagina_crear_playlist.innerHTML + playlist_name_html
             counter++
+
         }
+
     }
     add_event_listeners_playlists()
 
