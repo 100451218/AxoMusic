@@ -40,7 +40,7 @@ li{
     flex-direction: column;
 }
 
-li img{
+.song_image{
     height:40%;
 }
 

@@ -1,0 +1,14 @@
+.canciones_añadidas{
+    height: 30%;
+}
+
+
+.Music_suggestions_container{
+    overflow-x: scroll;
+    height: 50%;
+}
+
+
+.song_image:hover{
+    opacity: 20%;
+}

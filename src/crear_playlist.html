@@ -2,28 +2,40 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>AxoMusic</title>
+  <title>Añadir Playlist</title>
+  <link rel="stylesheet" href="style/Buscador.css">
   <link rel="stylesheet" href="style/main.css">
+  <link rel="stylesheet" href="style/crear_playlist.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="scripts/main.js" defer></script>
+  <script src="scripts/Buscador.js" defer></script>
+  <script src="scripts/music.js"></script>
   <script src="scripts/claro_oscuro.js" defer></script>
+  <script src="scripts/crear_playlist.js" defer></script>
 </head>
-<body>
+<body onload="load_all_local_songs(); load_add()">
 <header>
   <img src="images/AxoMusic.png" alt="Webpage logo">
   <div class="menu">
     <label id="switch" class="claro_oscuro">
       <input type="checkbox"> oscuro
+      <span class="slider round"></span>
     </label>
     <a href="main.html"><button id="button_home">Home</button></a>
     <a href="main.html"><button id="button_playlist">Playlist</button></a>
     <a href="perfil.html" id="a_amigos"><button id="button_amigos">Amigos</button></a>
     <a href="cuenta.html" id="a_cuenta"><button id="button_cuenta">Cuenta</button></a>
     <a href="inicioRegistroSesion.html" id="a_register"><button id="button_register">Iniciar sesión</button></a>
-
   </div>
 </header>
 <main>
+  <div class="search_bar_container">
+    <input class="nombre_nueva_playlist search_bar" id="nombre_nueva_playlist" placeholder="Introduzca nombre de la nueva playlist">
+    <input onkeyup="mostrar_sugerencias()" placeholder="---Escribe canción, artista, album o género que quieras añadir a la playlist---" type="text" id="user_input" class="search_bar">
+  </div>
+  <div class="canciones_añadidas"></div>
+  <div class="Music_suggestions_container" id="Music_suggestions_container">
+  </div>
   <a href="Buscador.html" ><button class="go_to_buscador"></button></a>
 </main>
 <footer>
