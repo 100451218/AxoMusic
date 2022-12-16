@@ -56,25 +56,4 @@ h4 {
 }
 
 
-::-webkit-scrollbar {
-    height: 20px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: #ffa06d;
-
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background-image: url(../images/ajolote_scrollbar.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #6ec4ff;
-    border-radius: 20px;
-}
-
 
