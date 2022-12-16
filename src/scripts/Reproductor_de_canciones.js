@@ -13,12 +13,16 @@ function play_song(e){
         document.getElementById("music_control").setAttribute("src", "")
         $("#music_control").hide()
         $(".me_gusta_button").hide()
+        localStorage.setItem(localStorage.getItem("currentUser")+"_escuchando", "")
         return
     }
     document.getElementById("music_control").setAttribute("src", source_url)
+    console.log(source_url)
+
     $("#music_control").show()
     if (localStorage.currentUser != "" && localStorage.currentUser != undefined){
         $(".me_gusta_button").show() // para que enseñe el botón de me gusta solo a users
+        localStorage.setItem(localStorage.getItem("currentUser")+"_escuchando", source_url.slice(6))
     }
 
 }
