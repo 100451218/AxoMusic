@@ -7,6 +7,7 @@ function draw_profile(){
 
     nombre_usuario = localStorage.getItem("currentUser")
     if (nombre_usuario !== null && nombre_usuario !== "") {
+        cancion_mas_escuchada()
         escuchando_ahora_mp3 = localStorage.getItem(nombre_usuario + "_escuchando")
         cancion_favorita_mp3 = localStorage.getItem(nombre_usuario + "_cancion_favorita")
         escuchando_ahora = MUSIC_DATA[escuchando_ahora_mp3]
@@ -84,4 +85,19 @@ function add_event_listeners(){
             draw_profile()
         })
     }
+
+}
+
+function cancion_mas_escuchada() {
+    var valor=0
+    var llave=null
+    currentUser=localStorage.getItem("currentUser")
+    for (const [key, value] of Object.entries(MUSIC_DATA)) {
+        reserva=parseInt(localStorage.getItem(currentUser+"_counter_"+key))
+        if (valor<reserva && reserva!== undefined && reserva!==null) {
+            valor=reserva
+            localStorage.setItem(currentUser + "_cancion_favorita", key)
+        }
+
+      } 
 }

@@ -20,12 +20,20 @@ function play_song(e){
         return
     }
     document.getElementById("music_control").setAttribute("src", source_url)
+
     $("#music_control").show()
     $("#button_prev_song").show()
     $("#button_next_song").show()
     if (localStorage.currentUser != "" && localStorage.currentUser != undefined){
         $(".me_gusta_button").show() // para que enseñe el botón de me gusta solo a users
         localStorage.setItem(localStorage.getItem("currentUser")+"_escuchando", source_url.slice(6))
+        if (localStorage.getItem(localStorage.getItem("currentUser")+"_counter_"+source_url.slice(6)) === null ) {
+            localStorage.setItem(localStorage.getItem("currentUser")+"_counter_"+source_url.slice(6),"1")
+        }
+        else{
+            counter=parseInt(localStorage.getItem(localStorage.getItem("currentUser")+"_counter_"+source_url.slice(6)))+1
+            localStorage.setItem(localStorage.getItem("currentUser")+"_counter_"+source_url.slice(6),`${counter}`)
+        }
     }
 
 }
