@@ -1,5 +1,4 @@
 
-
 window.addEventListener('load', (event) => {
 
     if (localStorage.currentUser == "" | localStorage.currentUser == undefined){
@@ -73,35 +72,27 @@ function add_song_not_listened(){
 
 
 function agregar_a_me_gusta(){
-    //var db = JSON.parse(db_string);
     var audio_source = document.getElementById('music_control').getAttribute('src'); //coger la direccion de la canción
-    var user = localStorage.getItem("current_user");
-    var isitempty = localStorage.getItem(user + "_me_gusta");
 
-  /*var longitud = audio_source.length - 4;
-    var audio_source = audio_source.substring(7, longitud);*/
+    var user = localStorage.getItem("currentUser");
+    var isitempty = localStorage.getItem(user + "_playlist_me_gusta");
+    nombre_nueva_playlist= "me_gusta"
+    var longitud = audio_source.length - 4;
+    var nombre_cancion = audio_source.substring(6, longitud)+".mp3";
+    var canciones = JSON.parse(localStorage.getItem(user+'_playlist_'+nombre_nueva_playlist));
 
-
-    if (isitempty=="0" | isitempty==undefined) {
-        localStorage.setItem(user + "_me_gusta","1");
-        name = "me gusta";
-
-    }
-    //console.log(audio_source);
-
-    image_path =  audio_source + ".jpg";
-    playsong_path = "images/" + audio_source + ".mp3";
-    mp3 = audio_source;
-
-    for (const [key, value] of Object.entries(db)){
-        var songs = db[key];
-        for(var i = 0; i < songs.length; i++){
-            if(songs[i].path == image_path){
-                var name = songs[i].name;
-                continuar();
-                break;
-            }
-    
+    if (localStorage.getItem(user+'_playlist_'+nombre_nueva_playlist)==null) {
+        //Si no existe la playlist
+        localStorage.setItem(user+'_playlist_'+nombre_nueva_playlist, `["${nombre_cancion}"]`);
+        
+    } else{
+        //Si ya existe esta playlist, sacamos primero las canciones
+        if (canciones.indexOf(nombre_cancion)==-1) {
+            canciones = JSON.parse(localStorage.getItem(user+"_playlist_"+nombre_nueva_playlist));
+            //console.log(canciones)
+            canciones.push(nombre_cancion)
+            //console.log(canciones)
+            localStorage.setItem(user+"_playlist_"+nombre_nueva_playlist, JSON.stringify(canciones));
         }
     }
 }
@@ -131,5 +122,4 @@ function randomizar(array) {
     }
     return array;
 }
-
 

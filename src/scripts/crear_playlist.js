@@ -12,7 +12,7 @@ function add_song_to_playlist(){
         alert('No se puede añadir a playlist sin nombre')
     } else if (localStorage.getItem(user+'_playlist_'+nombre_nueva_playlist)==null) {
         //Si el nombre es válido pero no existe la canción
-        localStorage.setItem(user+'_playlist_'+nombre_nueva_playlist, `[${this.id}]`);
+        localStorage.setItem(user+'_playlist_'+nombre_nueva_playlist, `["${this.id}"]`);
         this.style.display="none";
     } else{
         //Si han puesto un nombre válido y ya existe esta playlist, sacamos primero las canciones
