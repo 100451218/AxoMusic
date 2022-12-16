@@ -1,4 +1,6 @@
 
+let lista_sorpresa= crear_cola_aleatoria();
+
 window.addEventListener('load', (event) => {
 
     if (localStorage.currentUser == "" | localStorage.currentUser == undefined){
@@ -15,7 +17,9 @@ window.addEventListener('load', (event) => {
         add_song()
         add_song_not_listened()
         document.getElementsByClassName("music")[0].addEventListener("click", function(e){play_song(e)})
-        document.getElementsByClassName("sorprendeme")[0].addEventListener("click", function(e){play_song(e)})
+        document.getElementsByClassName("sorprendeme")[0].addEventListener("click", function(e){
+            reproducir_cola(lista_sorpresa, 0);
+        })
     }
 
 });
@@ -50,7 +54,7 @@ function add_song(){
     music.setAttribute('id',key);
 }
 
-let lista_sorpresa= crear_cola_aleatoria();
+
 
 function add_song_not_listened(){
     var key = lista_sorpresa[0];

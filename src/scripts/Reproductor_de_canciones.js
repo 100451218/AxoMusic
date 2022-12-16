@@ -1,4 +1,5 @@
 function play_song(e){
+
     let source_url;
     if (e.type == "click"){
         let info_audio = e.target.parentElement.id;
@@ -32,19 +33,46 @@ function play_song(e){
 function reproducir_cola(cola, index){
     let all_songs = []
     if (typeof cola == "string"){
-        const all_songs = cola.split("|");
+        all_songs = cola.split("|");
+
 
     }
-    console.log(typeof cola);
     if (typeof cola == "object"){
         all_songs = cola;
     }
+
+    let added_cola = "";
+
+    for (let i in all_songs){
+        if (i != (all_songs.length -1)){
+            added_cola += all_songs[i] + "|"
+        }
+        else{
+            added_cola += all_songs[i]
+        }
+
+    }
+
+    if (localStorage.currentUser != "" && localStorage.currentUser != undefined){
+        $(".me_gusta_button").show() // para que enseñe el botón de me gusta solo a users
+        localStorage.setItem(localStorage.getItem("currentUser")+"_escuchando", all_songs[index])
+        localStorage.setItem(localStorage.getItem("currentUser")+"_escuchando_playlist", added_cola)
+        localStorage.setItem(localStorage.getItem("currentUser")+"_playlist_index", index)
+    }
+
     play_song(all_songs[index]);
 
 }
 
-document.getElementById("button_prev_song").addEventListener("click", function (){})
-document.getElementById("button_next_song")
+document.getElementById("button_prev_song").addEventListener("click", function (){
+    anterior_cancion(localStorage.getItem(localStorage.getItem("currentUser")+"_escuchando_playlist"),
+        localStorage.getItem("currentUser")+"_playlist_index")
+})
+document.getElementById("button_next_song").addEventListener("click", function(){
+
+    siguiente_cancion(localStorage.getItem(localStorage.getItem("currentUser")+"_escuchando_playlist"),
+        localStorage.getItem("currentUser")+"_playlist_index")
+})
 
 
 function siguiente_cancion(cola, index){
