@@ -16,7 +16,7 @@ function draw_profile(){
 
         //columna izquierda
         pagina_perfil_left_html = document.getElementById("perfil_col_left")
-
+        pagina_perfil_left_html.innerHTML =  `<h2 style="text-align: center">TU PERFIL</h2><img id="perfil_tu_imagen" src="images/ProfilePicture.png" alt="profile picture">`
         pagina_perfil_left_html.innerHTML = pagina_perfil_left_html.innerHTML + `<h2 id="perfil_nombre">#${nombre_usuario}</h2>`
         //Creamos cancion favorita
         console.log(cancion_favorita_mp3)
@@ -33,6 +33,7 @@ function draw_profile(){
 
         //columna derecha
         pagina_perfil_right_html = document.getElementById("perfil_col_right")
+        pagina_perfil_right_html.innerHTML = `<h3 style="text-align: center">Amigos</h3>`
 
         counter = 0
         while (lista_amigos.length > counter) {
@@ -42,6 +43,7 @@ function draw_profile(){
             counter++
         }
     }
+    add_event_listeners()
 
 }
 
@@ -69,7 +71,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     crear_amigos_predefinidos()
     draw_profile()
     document.getElementById("button_amigos").style.border = "5px solid #f57c00"
-    add_event_listeners()
+
 })
 
 function add_event_listeners(){
@@ -79,6 +81,7 @@ function add_event_listeners(){
     for (let i = 0; i < songs_left.length; i++){
         songs_left.item(i).addEventListener("click", function(e){
             play_song(e)
+            draw_profile()
         })
     }
 }
