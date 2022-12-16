@@ -20,7 +20,7 @@ body{
 .form_iniciar_registrarse{
     height: 70%;
     width: 35%;
-    background-color:var(--naranja-form);
+    background-color:var(--color-button);
     display: flex;
     flex-direction: column;
     float:left;
