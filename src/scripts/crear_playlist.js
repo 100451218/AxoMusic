@@ -16,11 +16,11 @@ function add_song_to_playlist(){
         this.style.display="none";
     } else{
         //Si han puesto un nombre válido y ya existe esta playlist, sacamos primero las canciones
-        var canciones = localStorage.getItem(user+'_playlist_'+nombre_nueva_playlist);
+        var canciones = JSON.parse(localStorage.getItem(user+'_playlist_'+nombre_nueva_playlist));
         console.log(canciones)
-        canciones = canciones+'|'+ this.id;
+        canciones.push(this.id)
         console.log(canciones)
-        localStorage.setItem(user+'_playlist_'+nombre_nueva_playlist, canciones);
+        localStorage.setItem(user+'_playlist_'+nombre_nueva_playlist, JSON.stringify(canciones));
         this.style.display="none";
     }
 
