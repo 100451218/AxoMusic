@@ -88,6 +88,16 @@ header .menu{
     width: 40%;
 }
 
+.me_gusta_button {
+    display: none;
+    position: fixed;
+    bottom: 13px;
+    left: 80%;
+    width: 6%;
+    height: 6%;
+}
+
+
 .go_to_buscador{
     position: absolute;
     background-image: url("../images/busqueda.png");
