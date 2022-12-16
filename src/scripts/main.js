@@ -81,28 +81,11 @@ function add_song_not_listened(){
     music.setAttribute('id',key);
 }
 
-function play_song(e){
-    let info_audio = e.target.parentElement.id;
-    source_url = "music/"+info_audio
-    let object_to_change = document.getElementById("music_control").getAttribute("src");
-    if (object_to_change == source_url){
-        document.getElementById("music_control").setAttribute("src", "")
-        $("#music_control").hide()
-        $(".me_gusta_button").hide()
-        return
-    }
-    document.getElementById("music_control").setAttribute("src", source_url)
-    $("#music_control").show()
-    if (localStorage.currentUser != "" && localStorage.currentUser != undefined){  
-        $(".me_gusta_button").show() // para que enseñe el botón de me gusta solo a users
-    }
-    
-}
+
 
 function agregar_a_me_gusta(){
     //var db = JSON.parse(db_string);
     var audio_source = document.getElementById('music_control').getAttribute('src'); //coger la direccion de la canción
-
     var user = localStorage.getItem("current_user");
     var isitempty = localStorage.getItem(user + "_me_gusta");
 
@@ -117,13 +100,9 @@ function agregar_a_me_gusta(){
     }
     //console.log(audio_source);
 
-
-
-    
     image_path =  audio_source + ".jpg";
     playsong_path = "images/" + audio_source + ".mp3";
     mp3 = audio_source;
-
 
     for (const [key, value] of Object.entries(db)){
         var songs = db[key];
@@ -136,6 +115,37 @@ function agregar_a_me_gusta(){
     
         }
     }
-    
 }
+
+crear_cola_aleatoria()
+function crear_cola_aleatoria(){
+    let array_canciones = [];
+    for (let key in MUSIC_DATA){
+        array_canciones.push(key);
+    }
+    console.log(array_canciones);
+}
+//reproducir_cola("038.mp3|037.mp3|036.mp3|034.mp3|035.mp3|039.mp3|040.mp3|031.mp3|026.mp3|025.mp3|013.mp3|011.mp3|016.mp3|003.mp3|007.mp3|009.mp3|003.mp3|005.mp3|007.mp3|009.mp3",0)
+
+function reproducir_cola(cola, index){
+    const all_songs = cola.split("|");
+    play_song(all_songs[index])
+}
+
+
+/*function play_song_from_url(song){
+    let source_url = "music/"+song;
+    let object_to_change = document.getElementById("music_control").getAttribute("src");
+    if (object_to_change == source_url){
+        document.getElementById("music_control").setAttribute("src", "")
+        $("#music_control").hide()
+        $(".me_gusta_button").hide()
+        return
+    }
+    document.getElementById("music_control").setAttribute("src", source_url)
+    $("#music_control").show()
+    if (localStorage.currentUser != "" && localStorage.currentUser != undefined){
+        $(".me_gusta_button").show() // para que enseñe el botón de me gusta solo a users
+    }
+}*/
     
