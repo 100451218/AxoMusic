@@ -6,6 +6,7 @@ body{
     --color-button: #6ec6ff;
     --color-fondo:#2196f3;
     --naranja-form: #E9791A;
+    --color-text: black;
 
 }
 
@@ -14,6 +15,7 @@ body{
     --color-button: #657b8c;
     --color-fondo: #3c4c8f;
     --naranja-form: #894c17;
+    --color-text: white;
 }
 
 
@@ -29,11 +31,16 @@ body{
     justify-content: space-evenly;
 }
 
+.form_iniciar_registrarse div{
+    color: var(--color-text);
+}
+
 .form_iniciar_registrarse h2{
     height: 10%;
     width: 100%;
     display: flex;
     justify-content: center;
+    color: var(--color-text);
 }
 
 
