@@ -90,14 +90,16 @@ function reproducir_cola(cola, index){
 
 }
 
-document.getElementById("button_prev_song").addEventListener("click", function (){
-    anterior_cancion(localStorage.getItem(localStorage.getItem("currentUser")+"_escuchando_playlist"),
-        localStorage.getItem(localStorage.getItem("currentUser")+"_playlist_index"))
-})
-document.getElementById("button_next_song").addEventListener("click", function(){
+window.addEventListener('load', () => {
+    document.getElementById("button_prev_song").addEventListener("click", function () {
+        anterior_cancion(localStorage.getItem(localStorage.getItem("currentUser") + "_escuchando_playlist"),
+            localStorage.getItem(localStorage.getItem("currentUser") + "_playlist_index"))
+    })
+    document.getElementById("button_next_song").addEventListener("click", function () {
 
-    siguiente_cancion(localStorage.getItem(localStorage.getItem("currentUser")+"_escuchando_playlist"),
-        localStorage.getItem(localStorage.getItem("currentUser")+"_playlist_index"))
+        siguiente_cancion(localStorage.getItem(localStorage.getItem("currentUser") + "_escuchando_playlist"),
+            localStorage.getItem(localStorage.getItem("currentUser") + "_playlist_index"))
+    })
 })
 
 

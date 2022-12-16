@@ -109,8 +109,15 @@ header .menu{
     display: none;
     position: fixed;
     bottom: 13px;
-    left: 80%;
+    left: 71%;
     width: 6%;
+    height: 6%;
+}
+
+#song_identifier{
+    display: none;
+    position: fixed;
+    left: 80%;
     height: 6%;
 }
 
