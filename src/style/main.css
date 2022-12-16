@@ -88,6 +88,20 @@ header .menu{
     width: 40%;
 }
 
+#button_prev_song{
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    left: 10%;
+}
+
+#button_next_song{
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    left: 20%;
+}
+
 .me_gusta_button {
     display: none;
     position: fixed;

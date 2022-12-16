@@ -24,7 +24,39 @@ function play_song(e){
 }
 
 function reproducir_cola(cola, index){
-    console.log(cola);
-    const all_songs = cola.split("|");
-    play_song(all_songs[index])
+    let all_songs = []
+    if (typeof cola == "string"){
+        const all_songs = cola.split("|");
+
+    }
+    console.log(typeof cola);
+    if (typeof cola == "object"){
+        all_songs = cola;
+    }
+    play_song(all_songs[index]);
+
+}
+
+document.getElementById("button_prev_song").addEventListener("click", function (){})
+document.getElementById("button_next_song")
+
+
+function siguiente_cancion(cola, index){
+    if (index == (cola.length -1)){
+        index == 0;
+    }
+    else {
+        index += 1;
+    }
+    reproducir_cola(cola, index);
+}
+
+function anterior_cancion(cola, index){
+    if (index == 0){
+        index = (cola.length - 1);
+    }
+    else {
+        index -= 1;
+    }
+    reproducir_cola(cola, index);
 }
