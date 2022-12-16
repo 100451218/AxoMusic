@@ -9,3 +9,13 @@ left: 70%;
 .playlists_container{
     overflow-y: scroll;
 }
+
+.playlist_name{
+    position: relative;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+}
