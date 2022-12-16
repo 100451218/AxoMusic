@@ -267,5 +267,91 @@ input:checked + .slider:before {
     .automatic_play h2{
         font-size: 100%;
     }
+
+    .music_image {
+        height: 40%;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+
+    #button_prev_song {
+        position: fixed;
+        bottom: 10px;
+        left: 10%;
+    }
+    #button_next_song {
+        position: fixed;
+        bottom: 40px;
+        left: 9%;
+    }
+
+    #song_identifier{
+        position: fixed;
+        left: 80%;
+        height: 6%;
+        color: white;
+        font-size: 13px;
+    }
+    .automatic_play {
+        display: flex;
+        background-color: #0b77a8;
+        height: 55vh;
+        flex-direction: column;
+        width: 30%;
+        align-items: center;
+        margin-left: 8%;
+        justify-content: center;
+    }
+}
+/*Ajuste de elementos para pantallas de tablet*/
+@media only screen and (min-width: 600px) and (max-width:768px){
+    .menu a{
+        margin-left: 2%;
+        margin-right: 2%;
+        position: relative;
+        width: 80%;
+        height: 60%;
+    }
+
+    .automatic_play h2{
+        font-size: 141%;
+    }
+
+    .music_image {
+        height: 40%;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+
+    #button_prev_song {
+        position: fixed;
+        bottom: 25px;
+        left: 4%;
+    }
+    #button_next_song {
+        position: fixed;
+        bottom: 25px;
+        left: 15%;
+    }
+
+    #song_identifier{
+        position: fixed;
+        left: 80%;
+        height: 6%;
+        color: white;
+        font-size: 16px;
+    }
+    .automatic_play {
+        display: flex;
+        background-color: #0b77a8;
+        height: 55vh;
+        flex-direction: column;
+        width: 30%;
+        align-items: center;
+        margin-left: 8%;
+        justify-content: center;
+    }
 }
 
