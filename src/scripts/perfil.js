@@ -69,6 +69,16 @@ window.addEventListener('DOMContentLoaded', (event) => {
     crear_amigos_predefinidos()
     draw_profile()
     document.getElementById("button_amigos").style.border = "5px solid #f57c00"
-
-
+    add_event_listeners()
 })
+
+function add_event_listeners(){
+    const songs_left = document.getElementsByClassName('perfil_col_left_song')
+
+
+    for (let i = 0; i < songs_left.length; i++){
+        songs_left.item(i).addEventListener("click", function(e){
+            play_song(e)
+        })
+    }
+}
