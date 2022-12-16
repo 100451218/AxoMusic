@@ -1,3 +1,7 @@
+window.addEventListener('load', (event) => {
+    document.getElementById("button_playlist").style.border = "5px solid #f57c00"
+});
+
 function add_song_to_playlist(){
     //En this tendremos el objeto que el usuario quiere añadir a la playlist
     //Por ahora, lo añade a localStorage y la oculta, nada más.
