@@ -22,3 +22,9 @@ function play_song(e){
     }
 
 }
+
+function reproducir_cola(cola, index){
+    console.log(cola);
+    const all_songs = cola.split("|");
+    play_song(all_songs[index])
+}
