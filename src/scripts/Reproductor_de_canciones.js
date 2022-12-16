@@ -28,6 +28,15 @@ function play_song(e){
         $("#me_gusta_button").show() // para que enseñe el botón de me gusta solo a users
 
         var canciones = JSON.parse(localStorage.getItem(localStorage.currentUser + '_playlist_me_gusta'));
+        localStorage.setItem(localStorage.getItem("currentUser")+"_escuchando", source_url.slice(6))
+        if (localStorage.getItem(localStorage.getItem("currentUser")+"_counter_"+source_url.slice(6)) === null ) {
+            localStorage.setItem(localStorage.getItem("currentUser")+"_counter_"+source_url.slice(6),"1")
+        }
+        else{
+            counter=parseInt(localStorage.getItem(localStorage.getItem("currentUser")+"_counter_"+source_url.slice(6)))+1
+            localStorage.setItem(localStorage.getItem("currentUser")+"_counter_"+source_url.slice(6),`${counter}`)
+        }
+
         if (localStorage.getItem(localStorage.currentUser + '_playlist_me_gusta') !== null) {
             if (canciones.indexOf(source_url.slice(6)) == -1) {
                 document.getElementById("me_gusta_button").setAttribute("src", "images/corazon_vacio.png")
@@ -41,16 +50,9 @@ function play_song(e){
         }
 
     }
-    else{
-        localStorage.setItem(localStorage.getItem("currentUser")+"_escuchando", source_url.slice(6))
-        if (localStorage.getItem(localStorage.getItem("currentUser")+"_counter_"+source_url.slice(6)) === null ) {
-            localStorage.setItem(localStorage.getItem("currentUser")+"_counter_"+source_url.slice(6),"1")
-        }
-        else{
-            counter=parseInt(localStorage.getItem(localStorage.getItem("currentUser")+"_counter_"+source_url.slice(6)))+1
-            localStorage.setItem(localStorage.getItem("currentUser")+"_counter_"+source_url.slice(6),`${counter}`)
-        }
-    }
+
+
+
 
 }
 
