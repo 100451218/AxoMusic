@@ -45,6 +45,11 @@ function cargar_playlists_de_usuario(){
 
                 cancion_html = `<div id=${canciones_lista[counter2]}><img class="lista_cancion" src="images/${MUSIC_DATA[canciones_lista[counter2]][4]}"><a>${MUSIC_DATA[canciones_lista[counter2]][0]}</a></div>`
                 playlist_name_html = playlist_name_html + cancion_html
+                cancion_html = `<div class="playlist_song" id=${canciones_lista[counter2]}>
+                    <img class="lista_cancion" src="images/${MUSIC_DATA[canciones_lista[counter2]][4]}">
+                    <a>${MUSIC_DATA[canciones_lista[counter2]][0]}</a>
+                    </div>`
+                pagina_crear_playlist.innerHTML = pagina_crear_playlist.innerHTML + cancion_html
                 counter2++
 
             }
