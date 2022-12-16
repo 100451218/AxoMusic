@@ -90,7 +90,8 @@ function reproducir_cola(cola, index){
     if (localStorage.currentUser != "" && localStorage.currentUser != undefined){
         $(".me_gusta_button").show() // para que enseñe el botón de me gusta solo a users
         localStorage.setItem(localStorage.getItem("currentUser")+"_escuchando", all_songs[index])
-        localStorage.setItem(localStorage.getItem("currentUser")+"_escuchando_playlist", added_cola)localStorage.setItem(localStorage.getItem("currentUser")+"_listening_index", parseInt(index))
+        localStorage.setItem(localStorage.getItem("currentUser")+"_escuchando_playlist", added_cola)
+        localStorage.setItem(localStorage.getItem("currentUser")+"_listening_index", parseInt(index))
     }
 
     play_song(all_songs[index]);
