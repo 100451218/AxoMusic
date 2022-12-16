@@ -2,6 +2,7 @@
 //Borrar marco del botón home
 window.addEventListener('load', () => {
     document.getElementById("button_home").style.border = "";
+    add_songs_buscador()
 })
 
 function load_all_local_songs(){
@@ -58,5 +59,18 @@ function mostrar_sugerencias(){
         }
     }
 
-
 }
+
+
+
+function add_songs_buscador(){
+
+    const added_songs = document.getElementsByClassName('song_image')
+
+    for (let i = 0; i < added_songs.length; i++){
+        added_songs.item(i).addEventListener("click", function(e){
+            play_song(e)
+        })
+    }
+}
+
