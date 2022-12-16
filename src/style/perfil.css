@@ -77,3 +77,11 @@
 #perfil_nombre{
     color: black;
 }
+
+#perfil_col_left h2{
+    text-align: center;
+}
+
+#perfil_col_right h3{
+    text-align: center;
+}
