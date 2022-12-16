@@ -1,43 +1,13 @@
-.lista_cancion{
-    position: relative;
-    width: 15%;
+.lista_cancion{position: relative;
+width: 15%;
+left: 70%;
 }
-.add_playlist_container{
-    height: 100%;
-    position: relative;
-    width: 20%;
+.Playlist_Container{
     border: solid;
     border-color: blue;
 }
-
-.add_playlist_container img{
-    width: 100%;
-}
 .playlists_container{
     overflow-y: scroll;
-    width: 70%;
-    margin-left: 10%;
-
-}
-.playlist_song{
-    align-items: center;
-    position: relative;
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
-}
-
-.playlist_song img{
-    margin-right: 10%;
-}
-h2 {
-    font-size: 5vw;
-}
-
-a {
-    font-size: 3vw;
-    left: 0;
-    position: absolute;
 }
 
 .playlist_name{
