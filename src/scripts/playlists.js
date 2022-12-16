@@ -31,7 +31,6 @@ function cargar_playlists_de_usuario(){
         pagina_crear_playlist.innerHTML = `<div id="playlists_list"></div>`
         counter = 0
         while (playlists_user.length > counter) {
-
             var playlist_name_html = `
             <h2 id="playlist_name" >${playlists_user[counter]}</h2>
             `
@@ -42,7 +41,10 @@ function cargar_playlists_de_usuario(){
             counter2 = 0
             while ((canciones_lista).length > counter2) {
 
-                cancion_html = `<div id=${canciones_lista[counter2]}><img class="lista_cancion" src="images/${MUSIC_DATA[canciones_lista[counter2]][4]}"><a>${MUSIC_DATA[canciones_lista[counter2]][0]}</a></div></div>`
+                cancion_html = `<div class="playlist_song" id=${canciones_lista[counter2]}>
+                    <img class="lista_cancion" src="images/${MUSIC_DATA[canciones_lista[counter2]][4]}">
+                    <a>${MUSIC_DATA[canciones_lista[counter2]][0]}</a>
+                    </div>`
                 pagina_crear_playlist.innerHTML = pagina_crear_playlist.innerHTML + cancion_html
                 counter2++
 
