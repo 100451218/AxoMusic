@@ -24,8 +24,7 @@ function play_song(e){
     document.getElementById("music_control").setAttribute("src", source_url)
 
     $("#music_control").show()
-    $("#button_prev_song").show()
-    $("#button_next_song").show()
+
 
     document.getElementById("song_identifier").innerHTML = MUSIC_DATA[info_audio][0] +"<br />" + MUSIC_DATA[info_audio][1];
     $("#song_identifier").show()
@@ -33,6 +32,8 @@ function play_song(e){
 
     if (localStorage.currentUser != "" && localStorage.currentUser != undefined) {
         $("#me_gusta_button").show() // para que enseñe el botón de me gusta solo a users
+        $("#button_prev_song").show()
+        $("#button_next_song").show()
 
         var canciones = JSON.parse(localStorage.getItem(localStorage.currentUser + '_playlist_me_gusta'));
         localStorage.setItem(localStorage.getItem("currentUser")+"_escuchando", source_url.slice(6))
@@ -111,13 +112,17 @@ window.addEventListener('load', () => {
 
 
 function siguiente_cancion(cola, index){
+
     if (index == (cola.length -1)){
         index = 0;
     }
     else {
         index ++;
     }
+
     reproducir_cola(cola, index);
+
+
 }
 
 function anterior_cancion(cola, index){

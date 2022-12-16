@@ -45,7 +45,22 @@ function not_log_in(e){
 
 
 function add_song(){
-    var key = "035.mp3"
+    nombre_usuario = localStorage.getItem("currentUser")
+    if (nombre_usuario !== null && nombre_usuario !== "") {
+        escuchando_ahora_mp3 = localStorage.getItem(nombre_usuario + "_escuchando")
+        var key
+        if (escuchando_ahora_mp3 == ""|| escuchando_ahora_mp3 == undefined){
+            key = "035.mp3";
+        }
+        else{
+            key = escuchando_ahora_mp3;
+        }
+    }
+    else {
+        key = "035.mp3";
+    }
+
+
     var music = document.getElementsByClassName("music")[0];
 
     var img = document.createElement('img');
