@@ -13,7 +13,7 @@ function play_song(e){
     if (object_to_change == source_url){
         document.getElementById("music_control").setAttribute("src", "")
         $("#music_control").hide()
-        $(".me_gusta_button").hide()
+        $("#me_gusta_button").hide()
         localStorage.setItem(localStorage.getItem("currentUser")+"_escuchando", "")
         $("#button_prev_song").hide()
         $("#button_next_song").hide()
@@ -24,8 +24,24 @@ function play_song(e){
     $("#music_control").show()
     $("#button_prev_song").show()
     $("#button_next_song").show()
-    if (localStorage.currentUser != "" && localStorage.currentUser != undefined){
-        $(".me_gusta_button").show() // para que enseñe el botón de me gusta solo a users
+    if (localStorage.currentUser != "" && localStorage.currentUser != undefined) {
+        $("#me_gusta_button").show() // para que enseñe el botón de me gusta solo a users
+
+        var canciones = JSON.parse(localStorage.getItem(localStorage.currentUser + '_playlist_me_gusta'));
+        if (localStorage.getItem(localStorage.currentUser + '_playlist_me_gusta') !== null) {
+            if (canciones.indexOf(source_url.slice(6)) == -1) {
+                document.getElementById("me_gusta_button").setAttribute("src", "images/corazon_vacio.png")
+
+            } else {
+                document.getElementById("me_gusta_button").setAttribute("src", "images/corazon.png")
+            }
+        }
+        else{
+            document.getElementById("me_gusta_button").setAttribute("src", "images/corazon_vacio.png")
+        }
+
+    }
+    else{
         localStorage.setItem(localStorage.getItem("currentUser")+"_escuchando", source_url.slice(6))
         if (localStorage.getItem(localStorage.getItem("currentUser")+"_counter_"+source_url.slice(6)) === null ) {
             localStorage.setItem(localStorage.getItem("currentUser")+"_counter_"+source_url.slice(6),"1")

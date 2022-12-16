@@ -102,7 +102,7 @@ header .menu{
     left: 20%;
 }
 
-.me_gusta_button {
+#me_gusta_button {
     display: none;
     position: fixed;
     bottom: 13px;
