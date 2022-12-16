@@ -69,8 +69,6 @@ function add_song_not_listened(){
     music.setAttribute('id',key);
 }
 
-
-
 function agregar_a_me_gusta(){
     var audio_source = document.getElementById('music_control').getAttribute('src'); //coger la direccion de la canción
 
@@ -96,8 +94,6 @@ function agregar_a_me_gusta(){
         }
     }
 }
-
-
 
 function crear_cola_aleatoria(){
     let array_canciones = [];
