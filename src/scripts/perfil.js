@@ -38,9 +38,10 @@ function draw_profile(){
 
         counter = 0
         while (lista_amigos.length > counter) {
-            escuchando_ahora_mp3 = localStorage.getItem(lista_amigos[counter] + "_escuchando")
-            escuchando_ahora_image = escuchando_ahora = MUSIC_DATA[escuchando_ahora_mp3][4]
-            pagina_perfil_right_html.innerHTML = pagina_perfil_right_html.innerHTML + `<div class="perfil_amigo" ><p>#${lista_amigos[counter]}</br>Escuchando ahora:</p><div id=${escuchando_ahora_mp3}><img class="perfil_col_left_song" src="images/${escuchando_ahora_image}"></div></div>`
+            escuchando_ahora_mp3 = localStorage.getItem(lista_amigos[counter] + "_escuchando");
+            escuchando_ahora_image = escuchando_ahora = MUSIC_DATA[escuchando_ahora_mp3][4];
+            escuchando_ahora_title = MUSIC_DATA[escuchando_ahora_mp3][0];
+            pagina_perfil_right_html.innerHTML = pagina_perfil_right_html.innerHTML + `<div class="perfil_amigo" ><p>#${lista_amigos[counter]}</br>Escuchando ahora:  ${escuchando_ahora_title}</p><div id=${escuchando_ahora_mp3}><img class="perfil_col_left_song" src="images/${escuchando_ahora_image}"></div></div>`
             counter++
         }
     }
