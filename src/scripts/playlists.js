@@ -33,7 +33,7 @@ function cargar_playlists_de_usuario(){
         while (playlists_user.length > counter) {
 
             var playlist_name_html = `
-            <h4 id="playlist_name" >${playlists_user[counter]}</h4>
+            <h2 id="playlist_name" >${playlists_user[counter]}</h2>
             `
             pagina_crear_playlist.innerHTML = pagina_crear_playlist.innerHTML + playlist_name_html
 
