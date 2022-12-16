@@ -112,8 +112,8 @@ window.addEventListener('load', () => {
 
 
 function siguiente_cancion(cola, index){
-
-    if (index == (cola.length -1)){
+    var cola_as_list=cola.split("|")
+    if (index == (cola_as_list.length -1)){
         index = 0;
     }
     else {
@@ -126,8 +126,9 @@ function siguiente_cancion(cola, index){
 }
 
 function anterior_cancion(cola, index){
+    var cola_as_list=cola.split("|")
     if (index == 0){
-        index = (cola.length - 1);
+        index = (cola_as_list.length - 1);
     }
     else {
         index --;
