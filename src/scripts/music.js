@@ -37,6 +37,5 @@ var MUSIC_DATA={
   "036.mp3": ["Misfit Toys", "Pusha T", "Arcane", ["Banda Sonora"], "missfits_toys.webp"],
   "037.mp3": ["Goodbye", "Ramsey", "Arcane", ["Banda Sonora"], "arcane.jpeg"],
   "038.mp3": ["What Could Have Been", "Sting", "Arcane", ["Banda Sonora"], "arcane.jpeg"],
-  "039.mp3": ["Guns For Hire", "Woodkid", "Arcane", ["Banda Sonora"], "arcane.jpeg"],
-  "040.mp3": ["Snakes", "Miyavi", "Arcane", ["Banda Sonora"], "Snakes.jpg"]
+  "039.mp3": ["Guns For Hire", "Woodkid", "Arcane", ["Banda Sonora"], "arcane.jpeg"]
 }
