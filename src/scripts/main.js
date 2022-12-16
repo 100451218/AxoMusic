@@ -12,7 +12,7 @@ window.addEventListener('load', (event) => {
         $("#a_register").hide();
 
     }
-    if (window.location.href.split("/").slice(-1)[0] == "main.html"){
+    if (window.location.href.split("/").slice(-1)[0] == "index.html"){
         document.getElementById("button_home").style.border = "5px solid #f57c00"
         add_song()
         add_song_not_listened()

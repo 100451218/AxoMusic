@@ -17,7 +17,7 @@ document.getElementById("iniciar_sesion").addEventListener("submit", (e)=> {
     if (check_username_log(usuario)){
         if (check_password(usuario, contra)){
             localStorage.currentUser = usuario;
-            window.location.replace("main.html");
+            window.location.replace("index.html");
         }
         else {
             //Si la contraseña es incorrecta
@@ -97,7 +97,7 @@ document.getElementById("registrarse").addEventListener("submit", (e)=> {
     localStorage.setItem(email_name, correo);
 
     localStorage.currentUser = usuario;
-    window.location.replace("main.html");
+    window.location.replace("index.html");
     return;
 
 })
