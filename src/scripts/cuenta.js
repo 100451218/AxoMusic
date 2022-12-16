@@ -39,7 +39,7 @@ function go_to_change_info(){
 function close_session(){
     if(confirm("¿Quieres cerrar sesión?")){
         localStorage.currentUser = "";
-        window.location.replace("main.html");
+        window.location.replace("index.html");
     }
     return;
 }
@@ -63,7 +63,7 @@ function delete_account(e){
         }
         localStorage.setItem("usernames", new_string)
         localStorage.setItem("currentUser", "")
-        window.location.replace("main.html")
+        window.location.replace("index.html")
     }
     return
 }
