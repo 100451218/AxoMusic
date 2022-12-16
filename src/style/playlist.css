@@ -1,5 +1,7 @@
-
-
+.lista_cancion{position: relative;
+width: 15%;
+left: 70%;
+}
 .Playlist_Container{
     border: solid;
     border-color: blue;

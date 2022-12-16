@@ -9,7 +9,9 @@
   <script src="scripts/music.js" defer></script>
   <script src="scripts/main.js" defer></script>
   <script src="scripts/claro_oscuro.js" defer></script>
+  <script src="scripts/Reproductor_de_canciones.js"></script>
   <script src="scripts/playlists.js"></script>
+
 
 </head>
 <body >
@@ -35,7 +37,10 @@
     <div id="playlists_list"></div>
   </main>
   <footer>
-    <p>Aprenderás muy rápido cómo funciona</p>
+    <button id = "button_prev_song">Canción anterior</button>
+    <button id = "button_next_song">Siguiente canción</button>
+    <audio controls id="music_control"></audio>
+    <img src="images/corazon_vacio.png" id="me_gusta_button" alt="me gusta" onclick="agregar_a_me_gusta()">
   </footer>
 </body>
 </html>
