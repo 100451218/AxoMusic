@@ -112,6 +112,12 @@ function agregar_a_me_gusta(){
 
     if (localStorage.getItem(user+'_playlist_'+nombre_nueva_playlist)===null) {
         //Si no existe la playlist
+        playlists = JSON.parse(localStorage.getItem(user+'_sus_playlists'))
+        if (playlists === null | playlists === undefined | playlists === ""){
+            playlists = []
+        }
+        playlists.push(nombre_nueva_playlist)
+        localStorage.setItem(user+'_sus_playlists', JSON.stringify(playlists) )
         localStorage.setItem(user+'_playlist_'+nombre_nueva_playlist, `["${nombre_cancion}"]`);
 
     } else{

@@ -8,10 +8,16 @@ function add_song_to_playlist(){
     var user=localStorage.getItem('currentUser');
     var nombre_nueva_playlist = document.getElementById('nombre_nueva_playlist').value;
     console.log(nombre_nueva_playlist)
-    if (nombre_nueva_playlist.value==""){
+    if (nombre_nueva_playlist=="" | nombre_nueva_playlist===null | nombre_nueva_playlist===undefined){
         alert('No se puede añadir a playlist sin nombre')
-    } else if (localStorage.getItem(user+'_playlist_'+nombre_nueva_playlist)==null) {
-        //Si el nombre es válido pero no existe la canción
+    } else if (localStorage.getItem(user+'_playlist_'+nombre_nueva_playlist)===null | localStorage.getItem(user+'_playlist_'+nombre_nueva_playlist)===undefined) {
+        //Si el nombre es válido pero no existe la playlist
+        playlists = JSON.parse(localStorage.getItem(user+'_sus_playlists'))
+        if (playlists === null | playlists === undefined | playlists === ""){
+            playlists = []
+        }
+        playlists.push(nombre_nueva_playlist)
+        localStorage.setItem(user+'_sus_playlists', JSON.stringify(playlists))
         localStorage.setItem(user+'_playlist_'+nombre_nueva_playlist, `["${this.id}"]`);
         this.style.display="none";
     } else{
