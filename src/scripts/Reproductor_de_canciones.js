@@ -1,11 +1,12 @@
 function play_song(e){
-
+    let info_audio;
     let source_url;
     if (e.type == "click"){
-        let info_audio = e.target.parentElement.id;
+        info_audio = e.target.parentElement.id;
         source_url = "music/"+info_audio
     }
     else {
+        info_audio = e;
         source_url = "music/"+e
     }
 
@@ -17,6 +18,7 @@ function play_song(e){
         localStorage.setItem(localStorage.getItem("currentUser")+"_escuchando", "")
         $("#button_prev_song").hide()
         $("#button_next_song").hide()
+        $("#song_identifier").hide()
         return
     }
     document.getElementById("music_control").setAttribute("src", source_url)
@@ -24,6 +26,11 @@ function play_song(e){
     $("#music_control").show()
     $("#button_prev_song").show()
     $("#button_next_song").show()
+
+    document.getElementById("song_identifier").innerHTML = MUSIC_DATA[info_audio][0] +"<br />" + MUSIC_DATA[info_audio][1];
+    $("#song_identifier").show()
+
+
     if (localStorage.currentUser != "" && localStorage.currentUser != undefined) {
         $("#me_gusta_button").show() // para que enseñe el botón de me gusta solo a users
 

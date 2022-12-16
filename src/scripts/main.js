@@ -2,17 +2,24 @@
 let lista_sorpresa= crear_cola_aleatoria();
 
 window.addEventListener('load', (event) => {
-
+    let currentPage = window.location.href.split("/").slice(-1)[0]
     if (localStorage.currentUser == "" | localStorage.currentUser == undefined){
         //Poner aquí todos los elementos que desaparezcan cuando no haya usuario registrado
         $("#a_cuenta").hide();
+        if (currentPage == "index.html"){
+            document.getElementById("seguir_escuchando").innerHTML = "Escuchar"
+        }
     }
     else {
         //Poner aquí todos los elementos que desaparezcan cuando haya un usuario registrado
         $("#a_register").hide();
+        if (currentPage == "index.html"){
+            document.getElementById("seguir_escuchando").innerHTML = "Seguir escuchando"
+        }
+
 
     }
-    if (window.location.href.split("/").slice(-1)[0] == "index.html"){
+    if (currentPage == "index.html"){
         document.getElementById("button_home").style.border = "5px solid #f57c00"
         add_song()
         add_song_not_listened()
