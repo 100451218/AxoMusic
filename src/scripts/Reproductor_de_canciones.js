@@ -83,30 +83,30 @@ function reproducir_cola(cola, index){
         $(".me_gusta_button").show() // para que enseñe el botón de me gusta solo a users
         localStorage.setItem(localStorage.getItem("currentUser")+"_escuchando", all_songs[index])
         localStorage.setItem(localStorage.getItem("currentUser")+"_escuchando_playlist", added_cola)
-        localStorage.setItem(localStorage.getItem("currentUser")+"_playlist_index", index)
+        localStorage.setItem(localStorage.getItem("currentUser")+"_playlist_index", parseInt(index))
     }
 
     play_song(all_songs[index]);
 
 }
-window.addEventListener('load', (event) => {
-    document.getElementById("button_prev_song").addEventListener("click", function () {
-        anterior_cancion(localStorage.getItem(localStorage.getItem("currentUser") + "_escuchando_playlist"),
-            localStorage.getItem("currentUser") + "_playlist_index")
-    })
-    document.getElementById("button_next_song").addEventListener("click", function () {
 
-        siguiente_cancion(localStorage.getItem(localStorage.getItem("currentUser") + "_escuchando_playlist"),
-            localStorage.getItem("currentUser") + "_playlist_index")
-    })
+document.getElementById("button_prev_song").addEventListener("click", function (){
+    anterior_cancion(localStorage.getItem(localStorage.getItem("currentUser")+"_escuchando_playlist"),
+        localStorage.getItem(localStorage.getItem("currentUser")+"_playlist_index"))
 })
+document.getElementById("button_next_song").addEventListener("click", function(){
+
+    siguiente_cancion(localStorage.getItem(localStorage.getItem("currentUser")+"_escuchando_playlist"),
+        localStorage.getItem(localStorage.getItem("currentUser")+"_playlist_index"))
+})
+
 
 function siguiente_cancion(cola, index){
     if (index == (cola.length -1)){
-        index == 0;
+        index = 0;
     }
     else {
-        index += 1;
+        index ++;
     }
     reproducir_cola(cola, index);
 }
@@ -116,7 +116,7 @@ function anterior_cancion(cola, index){
         index = (cola.length - 1);
     }
     else {
-        index -= 1;
+        index --;
     }
     reproducir_cola(cola, index);
 }
