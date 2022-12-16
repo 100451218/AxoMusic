@@ -61,11 +61,11 @@ function mostrar_sugerencias(){
 
 }
 
-
-
 function add_event_listeners(){
+    if (window.location.href.split("/").slice(-1)[0] != "Buscador.html"){
+        return
+    }
     const added_songs = document.getElementsByClassName('song_image')
-
     for (let i = 0; i < added_songs.length; i++){
         added_songs.item(i).addEventListener("click", function(e){
             play_song(e)
