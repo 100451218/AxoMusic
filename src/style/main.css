@@ -210,8 +210,8 @@ footer {
 .slider:before {
     position: absolute;
     content: "";
-    height: 26px;
-    width: 26px;
+    height: 80%;
+    width: 40%;
     left: 4px;
     bottom: 4px;
     background-color: var(--slider-color) ;
